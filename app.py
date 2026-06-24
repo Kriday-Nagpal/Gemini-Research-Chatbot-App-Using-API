@@ -1,8 +1,8 @@
 import streamlit as st
-import google.generativeai as genai
+from google import genai
 
 client = genai.Client(
-    api_key="AQ.Ab8RN6LFdvYRUGeyao3NhwF5w_Y2csBSmSRnD_sXB6_6wDjQvQ"
+    api_key=st.secrets["GEMINI_API_KEY"]
 )
 
 st.title("🤖 Gemini Research Chatbot")
@@ -17,6 +17,3 @@ if st.button("Submit"):
 
     st.write("Answer:")
     st.write(response.text)
-
-if st.button("Clear"):
-    st.rerun()
