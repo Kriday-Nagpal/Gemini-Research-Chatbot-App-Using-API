@@ -1,5 +1,5 @@
 import streamlit as st
-from google import genai
+import google.generativeai as genai
 
 client = genai.Client(
     api_key="AQ.Ab8RN6LFdvYRUGeyao3NhwF5w_Y2csBSmSRnD_sXB6_6wDjQvQ"
